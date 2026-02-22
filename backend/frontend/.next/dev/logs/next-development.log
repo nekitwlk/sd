@@ -1,0 +1,117 @@
+[00:00:02.674] Server  LOG     ✓ Ready in 1722ms
+[00:00:03.952] Server  ERROR   ⨯ ./src/app/page.tsx:46:9
+Ecmascript file had an error
+  44 |         posX += vx;
+  45 |         posY += vy;
+> 46 |         vy += 0.4; // gravity
+     |         ^^
+  47 |         opacity -= 0.02;
+  48 |
+  49 |         particle.style.left = `${posX}px`;
+
+cannot reassign to a variable declared with `const`
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[00:00:07.627] Browser ERROR   uncaughtError: Error: ./src/app/page.tsx:46:9
+Ecmascript file had an error
+  44 |         posX += vx;
+  45 |         posY += vy;
+> 46 |         vy += 0.4; // gravity
+     |         ^^
+  47 |         opacity -= 0.02;
+  48 |
+  49 |         particle.style.left = `${posX}px`;
+
+cannot reassign to a variable declared with `const`
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+
+
+[00:00:07.832] Browser ERROR   ./src/app/page.tsx:46:9
+Ecmascript file had an error
+  44 |         posX += vx;
+  45 |         posY += vy;
+> 46 |         vy += 0.4; // gravity
+     |         ^^
+  47 |         opacity -= 0.02;
+  48 |
+  49 |         particle.style.left = `${posX}px`;
+
+cannot reassign to a variable declared with `const`
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:00:07.952] Browser ERROR   ./src/app/page.tsx:46:9
+Ecmascript file had an error
+  44 |         posX += vx;
+  45 |         posY += vy;
+> 46 |         vy += 0.4; // gravity
+     |         ^^
+  47 |         opacity -= 0.02;
+  48 |
+  49 |         particle.style.left = `${posX}px`;
+
+cannot reassign to a variable declared with `const`
+
+Import traces:
+  Client Component Browser:
+    ./src/app/page.tsx [Client Component Browser]
+    ./src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./src/app/page.tsx [Client Component SSR]
+    ./src/app/page.tsx [Server Component]
+[00:00:59.889] Server  LOG     ✓ Compiled in 2.2s
+[00:01:02.166] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:31.772] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:21:38.437] Browser LOG     Данные сохранены (dev): {"hobbies":[],"name":"Арина Дев"}
+[00:21:40.971] Browser LOG     Данные сохранены (dev): {"hobbies":[],"name":"Арина Дев"}
+[00:21:41.650] Browser LOG     Данные сохранены (dev): {"hobbies":[],"name":"Арина Дев"}
+[00:21:41.994] Browser LOG     Данные сохранены (dev): {"hobbies":[],"name":"Арина Дев"}
+[00:21:42.121] Browser LOG     Данные сохранены (dev): {"hobbies":[],"name":"Арина Дев"}
+[00:34:22.204] Server  LOG     ✓ Compiled in 1402ms
+[00:34:47.720] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:34:50.090] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:40:21.595] Server  LOG     ✓ Compiled in 184ms
+[00:40:22.513] Browser ERROR   uncaughtError: ReferenceError: ai is not defined
+[00:41:15.209] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:41:15.218] Server  LOG     ✓ Compiled in 123ms
+[00:41:16.340] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:42:32.029] Browser LOG     Сохранено в dev-режиме: {"ai":"grok","favoriteShowsMovies":"","freeTime":"","gender":"male","height":-24,"hobbies":"","musicArtists":"","musicGenres":"","name":"","showsMovies":"Детективы","systemPrompt":"","weight":50}
+[00:45:54.061] Server  LOG     ✓ Compiled in 254ms
+[00:45:54.512] Browser ERROR   uncaughtError: ReferenceError: ai is not defined
+[00:46:34.257] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:46:34.280] Server  LOG     ✓ Compiled in 142ms
+[00:46:34.778] Server  ERROR   ⨯ ReferenceError: messagesSentByUser is not defined
+[00:46:34.830] Browser ERROR   uncaughtError: ReferenceError: messagesSentByUser is not defined
+[00:46:35.706] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:35.999] Browser ERROR   uncaughtError: ReferenceError: messagesSentByUser is not defined
+[00:47:22.408] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:47:22.430] Server  LOG     ✓ Compiled in 184ms
+[00:47:23.434] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:36.342] Server  LOG     ✓ Compiled in 636ms
+[00:51:39.113] Browser ERROR   Stats fetch error: {}
+[00:51:40.151] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:51:43.515] Browser ERROR   Stats fetch error: {}
