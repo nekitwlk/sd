@@ -26,7 +26,6 @@ export default function Home() {
 
   const [ai, setAi] = useState<'grok' | 'chatgpt'>('grok');
 
-  // Форма
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
@@ -46,7 +45,6 @@ export default function Home() {
   const [isSaving, setIsSaving] = useState(false);
   const [saveSuccess, setSaveSuccess] = useState(false);
 
-  // Статистика (пока статичная — можно заменить fetch)
   const totalRegistered = profiles.length > 0 ? profiles.length : 12473;
   const messagesSentByUser = 842;
 
@@ -91,7 +89,7 @@ export default function Home() {
     );
   };
 
-  const saveProfile = async () => {
+  const saveProfile = () => {
     if (!isFormValid()) {
       alert('Заполни все поля! Рост ≥ 140 см, вес ≥ 40 кг');
       return;
@@ -100,7 +98,8 @@ export default function Home() {
     setIsSaving(true);
     setSaveSuccess(false);
 
-    const profileData = {
+    const newProfile: Profile = {
+      id: Date.now().toString(),
       name,
       age,
       gender,
@@ -113,32 +112,18 @@ export default function Home() {
       showsMovies,
       favoriteShowsMovies,
       systemPrompt,
-      ai,
+      active: profiles.length === 0,
     };
 
-    try {
-      // Имитация запроса на бэкенд
-      await new Promise(resolve => setTimeout(resolve, 1200));
+    setProfiles([...profiles, newProfile]);
+    resetForm();
 
-      const newProfile = {
-        id: Date.now().toString(),
-        ...profileData,
-        active: profiles.length === 0,
-      };
-
-      setProfiles([...profiles, newProfile]);
-      setSaveSuccess(true);
-
-      setTimeout(() => {
-        setSaveSuccess(false);
-        setScreen('welcome');
-      }, 2200);
-    } catch (err) {
-      alert('Ошибка сохранения');
-      console.error(err);
-    } finally {
+    setTimeout(() => {
       setIsSaving(false);
-    }
+      setSaveSuccess(true);
+      setTimeout(() => setSaveSuccess(false), 3000);
+      setScreen('welcome');
+    }, 1500);
   };
 
   const editProfile = (profile: Profile) => {
@@ -430,14 +415,7 @@ export default function Home() {
 
               {saveSuccess && (
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <motion.span
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1.5 }}
-                    transition={{ duration: 0.6, yoyo: Infinity }}
-                    className="text-6xl"
-                  >
-                    🎉
-                  </motion.span>
+                  <span className="text-6xl animate-bounce">🎉</span>
                 </div>
               )}
             </div>
