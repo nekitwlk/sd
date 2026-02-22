@@ -1,11 +1,10 @@
-const path = require('path');
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 
-  turbopack: {
-    root: path.resolve(__dirname),  // фиксирует "inferred your workspace root" и поиск next/package.json
+  // Отключаем Turbopack полностью — используем стабильный webpack
+  experimental: {
+    turbopack: false,
   },
 };
 
